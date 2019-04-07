@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause()
     {
         super.onPause();
-        player.stop();
+        if(player.isPlaying()) player.stop();
         final FloatingActionButton fab = findViewById(R.id.fab);
         fab.setImageResource(R.drawable.ic_media_play);
     }
