@@ -1,7 +1,6 @@
 package com.example.zadaniedomowe1;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 class Contact
 {
     private String name;
@@ -131,7 +129,14 @@ public class MainActivity extends AppCompatActivity {
             player = new MediaPlayer();
             player.setAudioStreamType(AudioManager.STREAM_MUSIC);
             player.setDataSource(this, sounds[contactList.get(current_contact).getSound()]);
-            //player.prepare();
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.stop();
+                    FloatingActionButton fab = findViewById(R.id.fab);
+                    fab.setImageResource(R.drawable.ic_media_play);
+                }
+            });
         }
         catch(IOException e)
         {
