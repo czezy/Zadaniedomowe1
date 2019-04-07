@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Zadanie domowe 1</string>
+    <string name="action_settings">Settings</string>
+    <string name="change_contact">Change Contact</string>
+    <string name="change_sound">Change Sound</string>
+    <string name="nazwa_kontaktu">Nazwa kontaktu</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="sound_1">Sound 1</string>
+    <string name="sound_2">Sound 2</string>
+    <string name="sound_3">Sound 3</string>
+    <string name="sound_4">Sound 4</string>
+    <string name="sound_5">Sound 5</string>
+    <string name="back_message">Nothing has been changed!</string>
+    <string-array name="lista">
+        <item>John Doe</item>
+        <item>Jane Doe</item>
+        <item>Jan Kowalski</item>
+        <item>Krystyna Kowalska</item>
+        <item>Jakub Anonimowy</item>
+    </string-array>
+</resources>
